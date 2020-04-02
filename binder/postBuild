@@ -11,7 +11,13 @@ jupyter labextension uninstall --no-build jupyter-offlinenotebook
 # Upgrade jupyterlab if necessary
 conda install jupyterlab=2
 
+# install necessaary kernel and debugger related dependency following 
+# https://github.com/jupyterlab/debugger#installation , doing it in
+# postBuild and not `environment.yml` to avoid breaking jupyter-offlinenotebook
 conda install -c conda-forge xeus-python=0.6.12 ptvsd
+# install the debugger in postBuild and not `environment.yml` to 
+# avoid breaking jupyter-offlinenotebook
+jupyter labextension install @jupyterlab/debugger
 
 # repo2docker copies this repo into $HOME which means jupyter labextension
 # picks up hidden dot files and runs into problems so install from a
