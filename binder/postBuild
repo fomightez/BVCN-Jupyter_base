@@ -11,6 +11,8 @@ jupyter labextension uninstall --no-build jupyter-offlinenotebook
 # Upgrade jupyterlab if necessary
 conda install jupyterlab=2
 
+conda install -c conda-forge xeus-python=0.6.12 ptvsd
+
 # repo2docker copies this repo into $HOME which means jupyter labextension
 # picks up hidden dot files and runs into problems so install from a
 # different directory
