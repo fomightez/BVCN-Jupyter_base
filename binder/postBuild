@@ -28,3 +28,15 @@ cp -a * "$SRCDIR"
 cd "$SRCDIR"
 python -m pip install .
 jupyter labextension link --debug
+
+
+# clean up a bit since may be using the starting directory to work
+rm tsconfig.json
+rm setup.py
+rm setup.cfg
+rm README.md
+rm -rf jupyter_offlinenotebook
+rm -rf tests
+rm LICENSE
+rm MANIFEST.in
+rm package.json
