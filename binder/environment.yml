@@ -1,0 +1,8 @@
+name: jupyterlab-debugger
+channels:
+- conda-forge
+- default
+
+dependencies:
+- ptvsd
+- xeus-python=0.6.12
