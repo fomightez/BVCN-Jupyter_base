@@ -36,6 +36,7 @@ rm tsconfig.json
 rm setup.py
 rm setup.cfg
 rm README.md
+rm dev-requirements.txt
 rm -rf jupyter_offlinenotebook
 rm -rf tests
 rm LICENSE
