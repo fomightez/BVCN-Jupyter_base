@@ -23,4 +23,7 @@ The Visual Debugger extension is there to allow you to step through and understa
 
 Based on combining [the jupyter-offlinenotebook extension to enable saving notebooks to local-storage](https://github.com/manics/jupyter-offlinenotebook) and [the JupyterLab Visual Debugger](https://github.com/jupyterlab/debugger). This was tricky as adding `environment.yml` to the backbone of the jupyter-offlinenotebook extension repo kept causing the the jupyter-offlinenotebook extension to break. I had to move the necessary installs to the `postBuild` that was being used to install the jupyter-offlinenotebook extension.
 
+
+-----
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fomightez/BVCN-Jupyter_base/master?urlpath=lab%2Ftree%2FUntitled.ipynb)
