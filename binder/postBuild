@@ -31,6 +31,7 @@ jupyter labextension link --debug
 
 
 # clean up a bit since may be using the starting directory to work
+cd ~
 rm tsconfig.json
 rm setup.py
 rm setup.cfg

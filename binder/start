@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # clean up a bit more since may be using the starting directory to work
-rm -rf Binder
+rm -rf binder
 
 
 
