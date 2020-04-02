@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# clean up a bit since may be using the starting directory to work
+rm tsconfig.json
+rm setup.py
+rm setup.cfg
+rm README.md
+rm -rf Binder
+rm -rf jupyter_offlinenotebook
+rm -rf tests
+rm LICENSE
+rm MANIFEST.in
+rm package.json
+
+
+
+
+# this must be last line according to 
+# https://repo2docker.readthedocs.io/en/latest/config_files.html#start-run-code-before-the-user-sessions-starts
+exec "$@"
