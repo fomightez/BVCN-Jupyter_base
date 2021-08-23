@@ -13,7 +13,7 @@ The default notebook, 'Untitled.ipynb', that opens is a blank one with the debug
 
 The safety net is there to allow recovery of any of your Jupyter notebook work if your MyBinder-served session times out, see [here](https://github.com/biovcnet/biovcnet.github.io/wiki/Infrastructure:-MyBinder#safety-net-for-the-ephemeral-nature-of-sessions). Look for the notebook 'safety net demo.ipynb' when the session starts. This 'safety net' system is actually the source of the toolbar `Download` button. Because it is a special extension added here, you won't see that special button on all Jupyter notebook sessions you come across in the wild.
 
-#### Visual debugger
+#### Visual debugger (disabled for now; see below)
 
 The Visual Debugger extension is there to allow you to step through and understand code that is running. You have to use the `xpython` kernel to have access to the debugger. What kernel us being used is indicated in the upper right above the running notebook. You'll either see a 'Python 3' or 'xpython' next to the indicator of whether code is being actively processed. If you are using the vanilla 'Python 3' kernel at present, you can switch kernels to use the debugger. Two ways to switch: 1) In the menubar select `Kernel` > `Change kernel...` and select `xpython` in the choice listing; or 2) left-click on the kernel name in the upper right and toggle the choice to `xpython`. Keep in mind that switching will clear the current computational 'state', and so you would need to run again any previously run code. To give you a sense of how to use the debugger, can see the [debugger demonstrated](https://github.com/jupyterlab/debugger#jupyterlabdebugger) in an animated gif [here](https://github.com/jupyterlab/debugger#jupyterlabdebugger). A notebook similar to the one in the demonstration gif is available in the running session as 'debugger demo.ipynb'.
 
@@ -21,7 +21,8 @@ The Visual Debugger extension is there to allow you to step through and understa
 
 ## Technical details
 
-Based on combining [the jupyter-offlinenotebook extension to enable saving notebooks to local-storage](https://github.com/manics/jupyter-offlinenotebook) and [the JupyterLab Visual Debugger](https://github.com/jupyterlab/debugger). This was tricky as adding `environment.yml` to the backbone of the jupyter-offlinenotebook extension repo kept causing the the jupyter-offlinenotebook extension to break. I had to move the necessary installs to the `postBuild` that was being used to install the jupyter-offlinenotebook extension.
+Originally based on [this repo](https://github.com/fomightez/BVCN-Jupyter_base) combining [the jupyter-offlinenotebook extension to enable saving notebooks to local-storage](https://github.com/manics/jupyter-offlinenotebook) and [the JupyterLab Visual Debugger](https://github.com/jupyterlab/debugger), where also the Table of Contents extension was added, see [here](https://github.com/jupyterlab/jupyterlab-toc#jupyterlab-toc).  
+However, the offline notebook has now been integrated into JupyterLab on Binder, and in fact the Table of Contents viewer is now built-in. And so the build process can now be streamlined wish signficant speed-up. Recently, [the JupyterLab Visual Debugger](https://github.com/jupyterlab/debugger) as also been built in; however, is not implemented here yet. [From here](https://github.com/jupyterlab/debugger#jupyterlabdebugger) that would require using an `environment.yml` and so I haven't built it back in yet, as I don't know if it is worth it right now as it requires switching the kernel around and I don't think I left directions for that in here(?).
 
 
 -----
