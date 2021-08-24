@@ -1,7 +1,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fomightez/BVCN-Jupyter_base/master?urlpath=lab%2Ftree%2FUntitled.ipynb)
 
 # BVCN-Jupyter_base
-JupyterLab 2.0 with offlinenotebook safety net and Visual Debugger for use via MyBInder.org by BVCN.
+JupyterLab with offlinenotebook safety net and Visual Debugger for use via MyBInder.org by BVCN.
 
 ## Guidance on what you'll see in the sessions launched from here
 
